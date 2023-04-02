@@ -4,10 +4,10 @@ import time
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)  # Create a socket
 sock.settimeout(1)
 
-UDP_IP = "192.168.1.47"  # Target IP Address
+UDP_IP = "192.168.1.127"  # Target IP Address
 UDP_PORT = 53
 
-PC_IP = "192.168.1.43"
+PC_IP = "192.168.1.128"  # Set your PC's IP as this manually rom settings (static)
 
 
 def send_bytes(data):
