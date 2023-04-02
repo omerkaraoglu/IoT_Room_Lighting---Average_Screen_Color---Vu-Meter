@@ -7,7 +7,7 @@ sock.settimeout(1)
 UDP_IP = "192.168.1.127"  # Target IP Address
 UDP_PORT = 53
 
-PC_IP = "192.168.1.128"  # Set your PC's IP as this manually rom settings (static)
+PC_IP = "192.168.1.128"  # Set your PC's IP as this manually from settings (static)
 
 
 def send_bytes(data):
