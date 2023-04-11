@@ -121,7 +121,30 @@ def round_up_to_nearest_100(num):
     return math.ceil(num / 100) * 100
 
 
-kelvin_key = round_up_to_nearest_100(int(input("Enter warmth value (1000K - 12000K): ")))
-kelvin = kelvin_table[kelvin_key]
+print("""
+   Color Table
+--------------------
+1800K  |  Candlelight
+2000K  |  Sunset
+2400K  |  Extra Warm
+2700K  |  Warm White
+3000K  |  Soft White
+4000K  |  Bright White
+5000K  |  Daylight
+6000K  |  Cool White
+7000K  |  Cloudy Sky
+10000K |  Blue Sky
+---------------------
 
-client.send_RGB_string(kelvin[0], kelvin[1], kelvin[2])
+""")
+
+
+while(1):
+    kelvin_key = round_up_to_nearest_100(int(input("Enter warmth value (1000K - 12000K): ")))
+
+    if 1000 <= kelvin_key <= 12000:
+        kelvin = kelvin_table[kelvin_key]
+        client.send_RGB_string(kelvin[0], kelvin[1], kelvin[2])
+
+    else:
+        print("Range Error: Enter between 1000 - 12000")
