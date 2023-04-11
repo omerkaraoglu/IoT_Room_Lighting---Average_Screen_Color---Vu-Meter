@@ -1,5 +1,5 @@
-import udpclient as client
 import math
+import udpclient as client
 
 
 kelvin_table = {
